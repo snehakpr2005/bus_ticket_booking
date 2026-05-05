@@ -97,7 +97,7 @@ export const updateBooking = async (req, res) => {
             };
         }
 
-        const booking = await Booking.findByIdAndUpdate(
+        const booking = await Booking.sfindByIdAndUpdate(
             req.params.id,
             updateData,
             { new: true }
