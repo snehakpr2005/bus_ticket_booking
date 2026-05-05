@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
-import reportRoutes from "./routes/reportRoutes.js";
+
 
 dotenv.config();
 connectDB();
@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api", bookingRoutes);
-app.use("/api", reportRoutes);
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
